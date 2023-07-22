@@ -15,6 +15,8 @@
         <module>cloud-photo-users</module>
         <module>cloud-photo-gateway</module>
         <module>cloud-photo-audit</module>
+        <module>cloud-photo-common</module>
+        <module>cloud-photo-trans</module>
     </modules>
 
     <properties>
