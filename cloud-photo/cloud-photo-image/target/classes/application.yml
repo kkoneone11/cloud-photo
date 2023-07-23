@@ -10,13 +10,13 @@ spring:
     host: 127.0.0.1
     port: 6379
   application:
-    name: cloud-photo-images
+    name: cloud-photo-image
   main:
     web-application-type: reactive
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/photo?zeroDateTimeBehavior=convertToNull&?useSSL=false&allowMultiQueries=true
+    url: jdbc:mysql://localhost:3306/photo?useSSL=false&characterEncoding=UTF-8&allowPublicKeyRetrieval=true
     username: root
-    password: root
+    password: 1234
     driver-class-name: com.mysql.jdbc.Driver
 
   kafka:

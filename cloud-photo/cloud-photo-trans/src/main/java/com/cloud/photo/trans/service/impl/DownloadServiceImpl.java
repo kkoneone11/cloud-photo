@@ -50,4 +50,9 @@ public class DownloadServiceImpl implements IDownloadService {
 
         return S3Util.getDownloadUrl(storageObject.getContainerId(),storageObject.getObjectId());
     }
+
+    @Override
+    public String getDownloadUrl(String containerId, String objectId) {
+        return S3Util.getDownloadUrl(containerId,objectId);
+    }
 }

@@ -1,4 +1,4 @@
-spring:
+CloudPhotoAuditApplicationspring:
   cloud:
     # nacos config
     nacos:

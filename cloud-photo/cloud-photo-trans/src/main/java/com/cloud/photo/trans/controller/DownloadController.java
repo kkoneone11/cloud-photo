@@ -48,4 +48,17 @@ public class DownloadController {
         log.info("getDownloadUrlByFileid() userId = " + userId + " , fileId = " + fileId +", url = " + url);
         return ResultBody.success(url);
     }
+
+    @RequestMapping()
+    public ResultBody getDownloadUrl(HttpServletRequest request,HttpServletResponse response,
+                                     @RequestParam( value = "containerId") String containerId,
+                                     @RequestParam( value = "objectId")String objectId){
+        //打印一下这次请求
+        String requestId = RequestUtil.getRequestId(request);
+        RequestUtil.printQequestInfo(request);
+
+        String url = iDownloadService.getDownloadUrl(containerId, objectId);
+        log.info("getDownloadUrl() url = "+url);
+        return ResultBody.success(url);
+    }
 }
