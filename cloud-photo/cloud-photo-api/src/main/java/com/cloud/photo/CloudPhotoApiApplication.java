@@ -12,7 +12,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  */
 @SpringBootApplication
 @EnableDiscoveryClient
-@EnableFeignClients(basePackages = {"com.cloud.photo.api.feign"})
+@EnableFeignClients(basePackages = {"com.cloud.photo.common.fegin"})
 public class CloudPhotoApiApplication {
     public static void main(String[] args) {
         SpringApplication.run(CloudPhotoApiApplication.class,args);

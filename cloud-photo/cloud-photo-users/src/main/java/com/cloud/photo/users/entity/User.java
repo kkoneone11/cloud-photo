@@ -1,9 +1,12 @@
 package com.cloud.photo.users.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.Date;
 
 /**
  * <p>
@@ -21,6 +24,7 @@ public class User implements Serializable {
     /**
      * 用户Id
      */
+    @TableId(type = IdType.ASSIGN_UUID)
     private String userId;
 
     /**
@@ -46,12 +50,12 @@ public class User implements Serializable {
     /**
      * 用户创建时间
      */
-    private LocalDateTime createTime;
+    private Date createTime;
 
     /**
      * 用户最后登录时间
      */
-    private LocalDateTime updateTime;
+    private Date updateTime;
 
     /**
      * 用户登录次数
@@ -110,19 +114,19 @@ public class User implements Serializable {
         this.password = password;
     }
 
-    public LocalDateTime getCreateTime() {
+    public Date getCreateTime() {
         return createTime;
     }
 
-    public void setCreateTime(LocalDateTime createTime) {
+    public void setCreateTime(Date createTime) {
         this.createTime = createTime;
     }
 
-    public LocalDateTime getUpdateTime() {
+    public Date getUpdateTime() {
         return updateTime;
     }
 
-    public void setUpdateTime(LocalDateTime updateTime) {
+    public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
     }
 
